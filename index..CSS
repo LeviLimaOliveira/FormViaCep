@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background:	#e0e0e0;
+}
+
+h1{
+    margin-bottom: 15px;
+    width: 75vw;
+}
+
+hr{
+    margin-bottom: 15px;
+    width: 100%;
+    border: none;
+    background-color: #ccc;
+    height: 0.9px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    display: flex;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-container {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Para telas menores, como smartphones */
+@media (max-width: 1030px) {
+    .container {
+        flex-direction: column; /* Coloca a imagem e o formulário em uma coluna */
+    }
+
+    .image-container
+    .form-container {
+        width: 100%; /* Ambos ocupam a largura total */
+        max-width: 100%; /* Limita a largura máxima à largura da janela */
+    }
+}
+
+/* Para telas maiores */
+@media (min-width: 1200px) {
+    .container {
+        flex-direction: row; /* Volta para o layout em linha */
+        width: 1025px;
+    }
+
+    .image-container {
+        width: 50%; /* A imagem ocupa metade da largura */
+        max-width: 50%; /* Limita a largura máxima */
+    }
+
+    .form-container {
+        width: 50%; /* O formulário ocupa metade da largura */
+        max-width: 50%; /* Limita a largura máxima */
+    }
+}
