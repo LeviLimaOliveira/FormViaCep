@@ -3,6 +3,7 @@ function buscaCep(){
     bairro.value = "";
     cid.value = "";
     uf.value = "";
+    complemento.value = "";
     pais.value = 'Brasil';
     
     fetch(`https://viacep.com.br/ws/${cep.value}/json`)
@@ -14,6 +15,7 @@ function buscaCep(){
             bairro.value = conteudo.bairro;
             cid.value = conteudo.localidade;
             uf.value = conteudo.uf;
+            complemento.value = conteudo.complemento;
             pais.value = "Brasil";
         });
 }
